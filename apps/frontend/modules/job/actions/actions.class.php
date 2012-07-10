@@ -16,11 +16,18 @@ class jobActions extends sfActions
       ->createQuery('a')
       ->execute();
   }
+  
+  // Added at Day4
+  public function executeFooBar(sfWebRequest $request)
+  {
+    $this->foo = 'bar';
+    $this->bar = array('bar', 'baz');
+  }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->jobeet_job = Doctrine_Core::getTable('JobeetJob')->find(array($request->getParameter('id')));
-    $this->forward404Unless($this->jobeet_job);
+    $this->job = Doctrine::getTable('JobeetJob')-> find($request->getParameter('id'));
+    $this->forward404Unless($this->job);
   }
 
   public function executeNew(sfWebRequest $request)

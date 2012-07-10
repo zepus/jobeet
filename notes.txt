@@ -1,0 +1,3 @@
+Day 4 - View and Controller
+    - template = view
+    - web = here are added the css, images, js and others
