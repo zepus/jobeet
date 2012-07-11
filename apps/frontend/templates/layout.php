@@ -17,10 +17,13 @@
     <div id="container">
       <div id="header">
         <div class="content">
-          <h1><a href="<?php echo url_for('job/index') ?>">
-            <img src="/images/logo.jpg" alt="Jobeet Job Board" />
-          </a></h1>
- 
+
+            <h1>
+                <a href="<?php echo url_for('homepage') ?>">
+                    <img src="/images.logo.jpg" alt="Jobeet Job Board" />
+                 </a>
+            </h1>
+            
           <div id="sub_header">
             <div class="post">
               <h2>Ask for people</h2>
