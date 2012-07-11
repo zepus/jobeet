@@ -38,3 +38,6 @@ Day 5 - Routing
     - "apps/frontend/config/routing.yml" - mapps between internal URIs and external URLs
     - Command = "cache:clear" - updates the routing configuration in the production environment
     - Command = "$ php symfony app:routes frontend" - list the generated routes
+    - Command = "sfConfig" class - for global usage of app settings
+    - "apps/frontend/config/app.yml" - centralizing global settings for application
+    - "config/app.yml" - centralizing global settings for project
