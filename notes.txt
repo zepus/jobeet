@@ -34,7 +34,7 @@ Day 4 - View and Controller
     - "[include_slot('title')] // [slot('title')]" - add slot to allow the title to be dynamic
 
 
-Day 5 - Routing
+Day 5, 6 - Routing / Model
     - "apps/frontend/config/routing.yml" - mapps between internal URIs and external URLs
     - Command = "cache:clear" - updates the routing configuration in the production environment
     - Command = "$ php symfony app:routes frontend" - list the generated routes
