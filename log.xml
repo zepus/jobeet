@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites failures="3" errors="0" tests="13" assertions="13" skipped="0">
+  <testsuite name="categoryActionsTest" file="D:\Workspace\sfprojects\jobeet\test\functional\frontend\categoryActionsTest.php" failures="1" errors="0" skipped="0" tests="1" assertions="1"/>
+  <testsuite name="jobActionsTest" file="D:\Workspace\sfprojects\jobeet\test\functional\frontend\jobActionsTest.php" failures="1" errors="0" skipped="0" tests="1" assertions="1"/>
+  <testsuite name="JobeetTest" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" failures="0" errors="0" skipped="0" tests="10" assertions="10">
+    <testcase name="::slugify() converts all characters to lower case" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="12" assertions="1"/>
+    <testcase name="::slugify() replaces a white space by a -" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="13" assertions="1"/>
+    <testcase name="::slugify() replaces several white spaces by a single -" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="14" assertions="1"/>
+    <testcase name="::slugify() removes - at the beginning of a string" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="15" assertions="1"/>
+    <testcase name="::slugify() removes - at the end of a string" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="16" assertions="1"/>
+    <testcase name="::slugify() replaces non-ASCII characters by a -" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="17" assertions="1"/>
+    <testcase name="::slugify() converts the empty string to n-a" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="19" assertions="1"/>
+    <testcase name="::slugify() converts the empty string with 2 whitespaces to n-a" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="20" assertions="1"/>
+    <testcase name="::slugify() converts a string that only contains non-ASCII characters to n-a" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="22" assertions="1"/>
+    <testcase name="::slugify() removes accents" file="D:\Workspace\sfprojects\jobeet\test\unit\JobeetTest.php" line="25" assertions="1"/>
+  </testsuite>
+  <testsuite name="JobeetJobTest" file="D:\Workspace\sfprojects\jobeet\test\unit\model\JobeetJobTest.php" failures="1" errors="0" skipped="0" tests="1" assertions="1"/>
+</testsuites>
