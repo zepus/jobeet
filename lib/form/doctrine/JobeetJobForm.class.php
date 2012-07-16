@@ -50,6 +50,6 @@ class JobeetJobForm extends BaseJobeetJobForm
       
       $this->widgetSchema->sethelp('is_public', 'Whether the job can also be published on affiliate website or not.');
       
-      
+      $this->widgetSchema->setNameFormat('job[%s]');
   }
 }

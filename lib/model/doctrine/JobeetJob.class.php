@@ -12,6 +12,15 @@
  */
 class JobeetJob extends BaseJobeetJob
 {
+    public function extend() {
+        if (!$this->expiresSoon()) {
+            return false;
+        }
+        $this->setExpiresAt(date('Y-m-d', time() + 86400 * sfConfig::get('app_active_days')));
+        $this->save();
+        return $this;
+    }
+    
     public function save(Doctrine_Connection $conn = null) {
         if ($this->isNew() && !$this->getExpiresAt()) {
             $now = $this->getCreatedAt() ? $this->getDateTimeObject('created_at')->format('U') : time();
