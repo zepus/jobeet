@@ -17,7 +17,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getFormActions()
   {
-    return array(  '_delete' => NULL,  '_list' => NULL,  '_save' => NULL,  '_save_and_add' => NULL,);
+    return array(  '_delete' => NULL,  '_list' => NULL,  '_save' => NULL,);
   }
 
   public function getNewActions()
@@ -42,7 +42,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListBatchActions()
   {
-    return array(  '_delete' => NULL,);
+    return array();
   }
 
   public function getListParams()

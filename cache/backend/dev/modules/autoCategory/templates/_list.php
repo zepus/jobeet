@@ -5,13 +5,12 @@
     <table cellspacing="0">
       <thead>
         <tr>
-          <th id="sf_admin_list_batch_actions"><input id="sf_admin_list_batch_checkbox" type="checkbox" onclick="checkAll();" /></th>
           <?php include_partial('category/list_th_tabular', array('sort' => $sort)) ?>
         </tr>
       </thead>
       <tfoot>
         <tr>
-          <th colspan="3">
+          <th colspan="2">
             <?php if ($pager->haveToPaginate()): ?>
               <?php include_partial('category/pagination', array('pager' => $pager)) ?>
             <?php endif; ?>
@@ -26,7 +25,6 @@
       <tbody>
         <?php foreach ($pager->getResults() as $i => $jobeet_category): $odd = fmod(++$i, 2) ? 'odd' : 'even' ?>
           <tr class="sf_admin_row <?php echo $odd ?>">
-            <?php include_partial('category/list_td_batch_actions', array('jobeet_category' => $jobeet_category, 'helper' => $helper)) ?>
             <?php include_partial('category/list_td_tabular', array('jobeet_category' => $jobeet_category)) ?>
           </tr>
         <?php endforeach; ?>
