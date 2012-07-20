@@ -2,12 +2,14 @@
 JobeetCategory:
   actAs:
     Timestampable: ~
-    Sluggable:
+    I18n:
       fields: [name]
+      actAs:
+        Sluggable: { fields: [name], uniqueBy: [lang, name] }
   columns:
     name:
       type: string(255)
-      notnull:  true
+      notnull: true
  
 JobeetJob:
   actAs: { Timestampable: ~ }

@@ -22,3 +22,5 @@ $browser->
     checkBody('/Your token is symfony/')->
   end()
 ;
+
+// http://www.symfony-project.org/jobeet/1_4/Doctrine/en/16

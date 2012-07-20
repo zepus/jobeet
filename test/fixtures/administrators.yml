@@ -3,6 +3,6 @@ sfGuardUser:
     email_address: admin@example.com
     username: admin
     password: admin
-    first_name: Spuze
-    last_name: Cristian
+    first_name: Fabien
+    last_name: Potencier
     is_super_admin: true
