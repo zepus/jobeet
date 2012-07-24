@@ -12,6 +12,7 @@ $browser->
     'signin' => array('username' => 'admin', 'password' => 'admin'),
     array('_with_csrf' => true)
   ))->
+
   with('response')->isRedirected()->
   followRedirect()->
  
@@ -22,5 +23,3 @@ $browser->
     checkBody('/Your token is symfony/')->
   end()
 ;
-
-// http://www.symfony-project.org/jobeet/1_4/Doctrine/en/16

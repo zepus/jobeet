@@ -81,10 +81,10 @@ class JobeetJob extends BaseJobeetJob
     public function save(Doctrine_Connection $conn = null) {
         if ($this->isNew() && !$this->getExpiresAt()) {
             $now = $this->getCreatedAt() ? $this->getDateTimeObject('created_at')->format('U') : time();
-            $this->setExpiresAt(date('Y-m-d H:i:s', $now + 86400 * sfConfig::get('app_active_days')));
+            $this->setExpiresAt(date('Y-m-d H:i:s', $now + 86400 * 30));
         }
         
-        if ($this->getToken()) {
+        if (!$this->getToken()) {
             $this->setToken(sha1($this->getEmail().rand(11111,99999)));
         }
         

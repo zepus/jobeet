@@ -4,12 +4,12 @@ include(dirname(__FILE__).'/../../bootstrap/functional.php');
 
 $browser = new JobeetTestFunctional(new sfBrowser());
 $browser->loadData();
- 
+
 $browser->info('1 - The category page')->
   info('  1.1 - Categories on homepage are clickable')->
   get('/en/')->
   click('Programming')->
-  with('request')->begin()->debug()->
+  with('request')->begin()->
     isParameter('module', 'category')->
     isParameter('action', 'show')->
     isParameter('slug', 'programming')->
@@ -37,5 +37,6 @@ $browser->info('1 - The category page')->
   with('request')->begin()->
     isParameter('page', 2)->
   end()->
-  with('response')->checkElement('.pagination_desc', '#page 2/2#')
+  with('response')->checkElement('.pagination_desc', '#page 2/2#')->
+  end()
 ;

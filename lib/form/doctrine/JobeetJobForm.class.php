@@ -48,4 +48,12 @@ class JobeetJobForm extends BaseJobeetJobForm
       
       $this->widgetSchema->setNameFormat('job[%s]');
   }
+  
+  protected function removeFields() {
+    unset(
+      $this['created_at'], $this['updated_at'],
+      $this['expires_at'], $this['is_activated'],
+      $this['token']
+    );
+  }
 }

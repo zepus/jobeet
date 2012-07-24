@@ -28,7 +28,7 @@ affiliate:
     actions: [new, create]
     object_actions:
       wait: get
-    prefx_path: /:sf_culture/affiliate
+    prefix_path: /:sf_culture/affiliate
   requirements:
     sf_culture: (?:fr|en)
 
