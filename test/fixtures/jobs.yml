@@ -72,6 +72,5 @@ JobeetJob:
     is_activated: true
     token:        job_<?php echo $i."\n" ?>
     email:        job@example.com
-    expires_at:   '2012-08-23'
     
 <?php endfor ?>

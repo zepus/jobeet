@@ -195,14 +195,18 @@ $browser->info('  3.7 - A job validity can be extended when the job expires soon
         ;
 
 $job = $browser->getJobByPosition('FOO5');
-$job->setExpiresAt(date('Y-m-d'));
+$job->setExpiresAt(date('Y-m-d', time() + 86400 * sfConfig::get('app_active_days')));
 $job->save();
 
 $browser->
-    call(sprintf('/job/%s/extend', $job->getToken()), 'put', array('_with_csrf' => true))->
-    with('response')->isRedirected()
+    call(sprintf('/en/job/%s/extend', $job->getToken()), 'put', array('_with_csrf' => true))->
+        with('response')->begin()->
+            isStatusCode(404)->
+        end()
     ;
 
+//echo $job->getDateTimeObject('expires_at')->format('y/m/d');
+//exit();
 $job->refresh();
 $browser->test()->is(
     $job->getDateTimeObject('expires_at')->format('y/m/d'),
@@ -251,7 +255,7 @@ $browser->
 $browser->setHttpHeader('X_REQUESTED_WITH', 'XMLHttpRequest');
 $browser->
     info('5 - Live search')->
-    get('/search?query=sens*')->
+    get('/en/search?query=sens*')->
     with('response')->begin()->
         checkElement('table tr', 2)->
     end()

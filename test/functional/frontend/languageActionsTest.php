@@ -1,19 +1,33 @@
 <?php
 
-//include(dirname(__FILE__).'/../../bootstrap/functional.php');
-//
-//$browser = new sfTestFunctional(new sfBrowser());
-//
-//$browser->
-//  get('/language/index')->
-//
-//  with('request')->begin()->
-//    isParameter('module', 'language')->
-//    isParameter('action', 'index')->
-//  end()->
-//
-//  with('response')->begin()->
-//    isStatusCode(200)->
-//    checkElement('body', '!/This is a temporary page/')->
-//  end()
-//;
+include(dirname(__FILE__).'/../../bootstrap/functional.php');
+
+$browser = new sfTestFunctional(new sfBrowser());
+
+$browser->
+  get('/en/')->
+
+  with('request')->begin()->
+    isParameter('module', 'job')->
+    isParameter('action', 'index')->
+  end()->
+
+  with('response')->begin()->
+    isStatusCode(200)->
+    checkElement('body', '!/This is a temporary page/')->
+  end()
+;
+
+$browser->
+  get('/fr/')->
+
+  with('request')->begin()->
+    isParameter('module', 'job')->
+    isParameter('action', 'index')->
+  end()->
+
+  with('response')->begin()->
+    isStatusCode(200)->
+    checkElement('body', '!/This is a temporary page/')->
+  end()
+;
