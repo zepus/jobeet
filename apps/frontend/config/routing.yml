@@ -88,13 +88,3 @@ job_show_user:
 homepage:
   url:   /
   param: { module: job, action: index }
-
-# generic rules
-# please, remove them by adding more specific rules
-
-#default_index:
-#  url:   /:module
-#  param: { action: index }
-#
-#default:
-#  url:   /:module/:action/*

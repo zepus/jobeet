@@ -37,6 +37,5 @@ $browser->info('1 - The category page')->
   with('request')->begin()->
     isParameter('page', 2)->
   end()->
-  with('response')->checkElement('.pagination_desc', '#page 2/2#')->
-  end()
+  with('response')->checkElement('.pagination_desc', '#page 2/2#')
 ;

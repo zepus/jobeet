@@ -28,14 +28,3 @@ generator:
         actions: {}
       filter:
         display: [url, email, is_active]  
-
-
-#    config:
-#      actions: ~
-#      fields:  ~
-#      list:    ~
-#      filter:  ~
-#      form:    ~
-#      edit:    ~
-#      new:     ~
-#      

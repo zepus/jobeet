@@ -1,3 +1,5 @@
 /plugins/.registry/
 /plugins/.channels/
-/cache/.pear/
+/cache/*
+/log/*
+/OldFiles/*

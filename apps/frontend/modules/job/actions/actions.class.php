@@ -36,9 +36,6 @@ class jobActions extends sfActions
         $this->redirect('localized_homepage');
     }
     $this->categories = Doctrine_Core::getTable('JobeetCategory')->getWithJobs();      
-      
-// 2     $this->categories = Doctrine_Core::getTable('JobeetCategory')->getWithJobs();
-// 1     $this->jobeet_jobs = Doctrine_Core::getTable('JobeetJob')->getActiveJobs();
   }
   
   // Added at Day4
